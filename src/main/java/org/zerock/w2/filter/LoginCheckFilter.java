@@ -26,10 +26,12 @@ public class LoginCheckFilter implements Filter {
         if(session.getAttribute("loginInfo") == null){
 
             resp.sendRedirect("/login");
-
+            System.out.println("aa");
             return;
         }
 
         chain.doFilter(request, response);
     }
+
 }
+
